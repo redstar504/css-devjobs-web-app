@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swalp');
+
+/* start reset */
+
+html, body, div, p, h1, h2, h3, h4, h5, h6,
+ul, ol, li, dl, dt, dd, form, fieldset, caption, legend,
+table, tr, td, th, address, blockquote, img {
+    margin: 0;
+    padding: 0;
+}
+
+img, fieldset {
+    border: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+button, label, summary {
+    cursor: pointer;
+}
+
+body, button, input, table, textarea, select {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+/* end reset */
+
+:root {
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --purplish-faded: hsl(243, 100%, 77%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --lighter-gray: hsl(229, 24%, 87%, 0.4);
+    --magnolia: hsl(217, 100%, 97%);
+    --alabaster: hsl(231, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #FFFF00;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Ubuntu, sans-serif;
+}
+
+h1 {
+    font-size: 6em;
+}
