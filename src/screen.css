@@ -48,7 +48,7 @@ ul {
 /* end reset */
 
 :root {
-    --violet: hsl(27, 22%, 51%);
+    --violet: hsl(235, 69%, 61%);
     --light-violet: hsl(235, 82%, 77%);
     --very-dark-blue: hsl(219, 29%, 14%);
     --midnight: hsl(220, 29%, 10%);
@@ -58,19 +58,16 @@ ul {
     --dark-gray: hsl(212, 23%, 69%);
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
     font: 400 1em/1.625 Kumbh Sans, sans-serif;
     color: var(--very-dark-blue);
-    background: var(--light-gray);
+    background: var(--light-gray) url(assets/mobile/bg-pattern-header.svg) top left / 100vw no-repeat;
+    padding: 1.5em;
 }
 
 h1 {
     font-size: 1.75rem;
-    line-height: 2.125;
+    color: var(--white);
 }
 
 h2 {
@@ -86,4 +83,92 @@ h3 {
 h4 {
     font-size: 0.875rem;
     line-height: 1.125;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 1.625em;
+}
+
+#darkMode {
+    display: none;
+}
+
+#darkModeWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s left;
+    gap: .75em;
+}
+
+#darkModeWrapper span {
+    width: 1.25em;
+    height: 1.25em;
+    background-image: url(assets/desktop/icon-sun.svg);
+}
+
+#darkModeWrapper span:last-child {
+    width: .75em;
+    height: .75em;
+    background-image: url(assets/desktop/icon-moon.svg);
+}
+
+#modeControl {
+    width: 3em;
+    height: 1.5em;
+    background: var(--white);
+    border-radius: 1em;
+    padding: .375rem 0 .375em 0;
+    position: relative;
+}
+
+#modeControl i {
+    display: block;
+    width: 0.75em;
+    height: 0.75em;
+    background: var(--violet);
+    border-radius: 50%;
+    position: absolute;
+    left: 0.375em;
+    transition: 0.075s left;
+}
+
+#darkMode:checked + #darkModeWrapper #modeControl i {
+    left: 1.875em;
+}
+
+#searchForm {
+    background: var(--white);
+    height: 5em;
+    border-radius: .375em;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+#searchForm input {
+    flex-grow: 1;
+    border: none;
+    color: var(--midnight);
+    height: 3em;
+    min-width: 0; /* @see https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size  */
+}
+
+#searchForm button {
+    flex:0 3em;
+    height: 100%;
+    padding:0;
+    margin:0;
+    min-width: 0;
+    background: transparent url(assets/mobile/icon-filter.svg) no-repeat center;
+    text-indent: -999em;
+}
+
+#searchForm #submitSearch {
+    background-image: url(assets/desktop/icon-search.svg);
+    background-color: var(--violet);
+    border-radius: 0.5em;
 }

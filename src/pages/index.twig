@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8"/>
     <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="initial-scale=1.0, viewport-fit=cover"/>
     <title>DevJobs Web App</title>
     <link rel="stylesheet" href="/src/screen.css">
 </head>
 <body>
-<h1>DevJobs Web App</h1>
+<header>
+    <h1>devjobs</h1>
+    <input type="checkbox" id="darkMode">
+    <label id="darkModeWrapper" for="darkMode">
+        <span></span>
+        <i id="modeControl"><i></i></i>
+        <span></span>
+    </label>
+</header>
+<main>
+    <form id="searchForm">
+        <input placeholder="Filter by title..">
+        <button id="filterSearch">Filter</button>
+        <button id="submitSearch">Search</button>
+    </form>
+</main>
 </body>
 </html>
