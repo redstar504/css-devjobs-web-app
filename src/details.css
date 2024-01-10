@@ -1,8 +1,3 @@
-#jobDescriptionWrapper {
-    max-width: 48em;
-    margin: 0 auto;
-}
-
 #companyDetailsCard {
     background: var(--white);
     text-align: center;
@@ -11,7 +6,6 @@
     border-radius: .375em;
     position: relative;
     margin: 3.5625em 0 1.5em;
-    overflow: hidden;
 }
 
 #companyDetailsCard h3 {
@@ -39,7 +33,8 @@
 }
 
 #companyDetailsCard .button {
-    margin: .875em 0 0;
+    display: inline-block;
+    padding: 0 1.25em;
 }
 
 #jobDetailsCard {
@@ -118,22 +113,24 @@
     top: .625em;
 }
 
-#jobDescriptionWrapper footer {
+#applyNowFooter {
     background: var(--white);
-    margin: 0 -1.5em -2em;
+    margin: 2em -1.5em -2em;
     text-align: center;
     padding: 1.5em;
 }
 
 @media (min-width: 48em) {
     #companyDetailsCard {
+        overflow: hidden;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 0 2.5em 0 0;
+        padding: 0 3em 0 0;
         align-items: center;
         column-gap: 2.5em;
         height: 8.75em;
+        margin: 2.875em 0;
     }
 
     #companyDetailsCard #companyLogo {
@@ -143,7 +140,6 @@
         border-radius: 0;
         width: 8.75em;
         display: flex;
-
     }
 
     #companyDetailsCard #companyLogo img {
@@ -165,7 +161,8 @@
 
     #companyDetailsCard .button {
         margin: 0 0 0 auto;
-        padding: 0 1.3125em;
+        padding: 0;
+        width: 9.5em;
     }
 
     #jobDetailsCard {
@@ -180,7 +177,8 @@
 
     #jobDetailsCard #applyNowButton {
         float: right;
-        width: auto;
         margin: -2.875em 0 0;
+        padding: 0;
+        width: 9.5em;
     }
 }
