@@ -25,7 +25,9 @@
             <input id="fullTimeQuery" type="checkbox" />
             <label for="fullTimeQuery">Full Time</label>
         </div>
-        <button id="filterButton">Filter</button>
+        <label for="areMobileFiltersOpen" id="openMobileFiltersButton">
+            Filter
+        </label>
         <button id="searchButton">Search</button>
     </form>
     <ul id="jobList">
@@ -138,5 +140,15 @@
 
     <button id="loadMoreButton">Load More</button>
 </main>
+<input type="checkbox" id="areMobileFiltersOpen" checked>
+<div id="mobileFiltersWrapper">
+    <input class="textField" placeholder="Filter by location...">
+    <label id="mobileFullTimeQueryLabel">
+        <input type="checkbox" id="mobileFullTimeQuery">
+        Full Time Only
+    </label>
+    <label for="areMobileFiltersOpen" id="mobileFilterButton">Search</label>
+</div>
+<label id="overlay" for="areMobileFiltersOpen"></label>
 </body>
 </html>

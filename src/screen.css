@@ -168,7 +168,8 @@ header {
     display: none;
 }
 
-#searchForm button {
+#searchForm button,
+#openMobileFiltersButton {
     flex: 0 3em;
     height: 3em;
     padding: 0;
@@ -250,6 +251,75 @@ header {
     vertical-align: middle;
 }
 
+#mobileFiltersWrapper {
+    position: fixed;
+    width: 20.4375em;
+    height: 13.5625em;
+    top: 50%;
+    left: 50%;
+    margin-left: calc(-20.4375em / 2);
+    margin-top: calc(-13.5625em / 2);
+    background-color: var(--white);
+    border-radius: 0.375em;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    row-gap: 1.5em;
+    padding: 1.5em;
+    overflow: hidden;
+    box-shadow: 0 25px 40px -20px rgba(0, 0, 0, 0.10);
+}
+
+#mobileFiltersWrapper .textField {
+    height: 4.5em;
+    width: calc(100% + 3em);
+    margin: -1.5em -1.5em 0;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: var(--dark-gray-faded);
+    outline: none;
+    background: url(assets/desktop/icon-location.svg) center left 1.5em no-repeat;
+    padding: 0 0 0 3.5625em;
+}
+
+#mobileFiltersWrapper #mobileFullTimeQueryLabel {
+    font-weight: 700;
+    display: flex;
+    column-gap: 1em;
+}
+
+#mobileFilterButton {
+    background: var(--violet);
+    height: 3em;
+    line-height: 3em;
+    color: var(--white);
+    font-weight: 700;
+    border-radius: .3125em;
+    text-align: center;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#areMobileFiltersOpen {
+    display: none;
+}
+
+#areMobileFiltersOpen:checked ~ #mobileFiltersWrapper {
+    display: flex;
+}
+
+#areMobileFiltersOpen:checked ~ #overlay {
+    display: block;
+}
+
 @media (min-width: 48em) {
     body {
         background-image: none;
@@ -318,12 +388,12 @@ header {
         font-weight: 700;
     }
 
-    #filterButton {
+    #openMobileFiltersButton {
         display: none;
     }
 
     #searchForm #searchButton {
-        background-image:none;
+        background-image: none;
         text-indent: 0;
         min-width: auto;
         padding: 0 .875em;
