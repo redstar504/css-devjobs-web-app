@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon-32x32.png"/>
+    <meta name="viewport" content="initial-scale=1.0, viewport-fit=cover"/>
+    <title>DevJobs Web App</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/src/screen.css">
+    {% endblock stylesheets %}
+</head>
+<body>
+<input type="checkbox" id="darkMode">
+<main>
+    <article>
+        <header>
+            <h1>
+                <a href="/">
+                    devjobs
+                    <span></span>
+                </a>
+            </h1>
+            <label id="darkModeWrapper" for="darkMode">
+                <span></span>
+                <i id="modeControl"><i></i></i>
+                <span></span>
+            </label>
+        </header>
+        {% block content %}{% endblock %}
+    </article>
+    <input type="checkbox" id="areMobileFiltersOpen">
+    <div id="mobileFiltersWrapper">
+        <input class="textField" placeholder="Filter by location...">
+        <label id="mobileFullTimeQueryLabel">
+            <input type="checkbox" id="mobileFullTimeQuery">
+            Full Time Only
+        </label>
+        <label for="areMobileFiltersOpen" id="mobileFilterButton" class="button">Search</label>
+    </div>
+    <label id="overlay" for="areMobileFiltersOpen"></label>
+</main>
+</body>
+</html>
