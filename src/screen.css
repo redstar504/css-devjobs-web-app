@@ -353,8 +353,9 @@ header {
 
 @media (min-width: 48em) {
     main {
-        background-image:none;
+        background-image: none;
         background-color: var(--light-gray);
+        padding: 2.625em 2.4375em;
     }
 
     body::before {
@@ -383,6 +384,10 @@ header {
 
     #locationQuery, #fullTimeQuery, #fullTimeQuery + label {
         display: block;
+    }
+
+    #searchForm {
+        margin: 0 0 4.375em;
     }
 
     #searchForm .textField {
@@ -426,5 +431,14 @@ header {
         text-indent: 0;
         min-width: auto;
         padding: 0 .875em;
+    }
+
+    #jobList {
+        row-gap: 4.0625em;
+        margin: 0 0 3.5em;
+    }
+
+    #loadMoreButton {
+        margin: 0 auto 1.1875em;
     }
 }
