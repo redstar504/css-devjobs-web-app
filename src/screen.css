@@ -63,6 +63,7 @@ ul {
     --dark-gray-faded: hsl(214, 17%, 51%, .2);
     --dark--gray-button-hover: hsl(217, 6%, 44%);
     --header-violet: #5964E0;
+    --max-width: 72em;
 }
 
 #darkMode:checked + main {
@@ -129,12 +130,12 @@ h4 {
 }
 
 @media(min-width: 48em) {
-    .button.alternate {
+    #darkMode:checked + main .button.alternate {
         background-color: var(--dark-gray-faded);
         color: var(--fixed-white);
     }
 
-    .button.alternate:hover {
+    #darkMode:checked + main .button.alternate:hover {
         background-color: var(--violet-fade-35);
         color: var(--violet);
     }
@@ -159,7 +160,7 @@ main {
 }
 
 main > article {
-    max-width: 60em;
+    max-width: var(--max-width);
     margin: 0 auto;
     position: relative;
     z-index: 3;
