@@ -74,9 +74,9 @@ body {
 
 main {
     background: var(--light-gray) url(assets/mobile/bg-pattern-header.svg) top left / 100vw no-repeat;
+    color: var(--very-dark-blue);
     padding: 1.5em;
     margin: 0 auto;
-    color: var(--very-dark-blue);
 }
 
 article {
@@ -291,7 +291,7 @@ header {
     margin-top: calc(-13.5625em / 2);
     background-color: var(--white);
     border-radius: 0.375em;
-    z-index: 4;
+    z-index: 5;
     display: none;
     flex-direction: column;
     row-gap: 1.5em;
@@ -336,7 +336,7 @@ header {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
-    z-index:3;
+    z-index: 4;
 }
 
 #areMobileFiltersOpen {
@@ -353,11 +353,11 @@ header {
 
 @media (min-width: 48em) {
     main {
-        background-image: none;
-        background-size: auto;
+        background-image:none;
+        background-color: var(--light-gray);
     }
 
-    main::before {
+    body::before {
         content: '';
         display: block;
         position: absolute;
@@ -370,7 +370,7 @@ header {
         background-repeat: no-repeat;
     }
 
-    main::after {
+    body::after {
         content: '';
         display: block;
         position: absolute;
