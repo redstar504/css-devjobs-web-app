@@ -3,8 +3,12 @@
 {% block content %}
     <section>
         <form id="searchForm">
-            <input id="titleQuery" class="textField" placeholder="Filter by title..">
-            <input id="locationQuery" class="textField" placeholder="Filter by location..">
+            <label class="fieldWrapper" id="titleQueryLabel">
+                <input class="textField" placeholder="Filter by title..">
+            </label>
+            <label class="fieldWrapper" id="locationQueryLabel">
+                <input class="textField" placeholder="Filter by location..">
+            </label>
             <div id="fullTimeQueryWrapper">
                 <input id="fullTimeQuery" type="checkbox"/>
                 <label for="fullTimeQuery">

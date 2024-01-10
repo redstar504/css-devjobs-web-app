@@ -86,6 +86,11 @@ body {
     background: var(--header-violet);
 }
 
+input:-webkit-autofill {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 50px white inset;
+}
+
 h2 {
     font-size: 1.5rem;
     line-height: 1.8125;
@@ -103,7 +108,7 @@ h4 {
 
 .button {
     background-color: var(--violet);
-    color: var(--fixed-white );
+    color: var(--fixed-white);
     font-weight: 700;
     border-radius: 0.3125rem;
     height: 3rem;
@@ -129,7 +134,7 @@ h4 {
     color: var(--violet);
 }
 
-@media(min-width: 48em) {
+@media (min-width: 48em) {
     #darkMode:checked + main .button.alternate {
         background-color: var(--dark-gray-faded);
         color: var(--fixed-white);
@@ -246,19 +251,29 @@ main > article > header {
     display: flex;
     align-items: center;
     margin: 0 0 3.5625em;
-    padding: 0 1em 0 0;
+    padding: 0 1em;
     overflow: hidden;
 }
 
-#searchForm .textField {
-    padding: 0 0 0 1.5em;
-    flex-grow: 1;
-    border: none;
-    background-color: transparent;
-    color: var(--midnight);
+#searchForm .fieldWrapper {
     height: 100%;
+    flex-grow: 1;
+    color: var(--midnight);
     min-width: 0; /* @see https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size  */
+}
+
+#searchForm .fieldWrapper .textField {
     outline: none;
+    border: none;
+}
+
+#locationQueryLabel {
+    display: none;
+}
+
+#searchForm .textField {
+    height: 100%;
+    width: 100%;
 }
 
 #locationQuery, #fullTimeQuery, #fullTimeQuery + label {
@@ -438,25 +453,24 @@ main > article > header {
         margin: 0 0 4.375em;
     }
 
-    #searchForm .textField {
-        border-right: .0625em solid var(--dark-gray-faded);
-        background-image: url(assets/desktop/icon-search-violet.svg);
-        background-repeat: no-repeat;
-        background-position: center left 1.5em;
-        padding: 0 0 0 4em;
+    #searchForm .fieldWrapper {
+        border-right:1px solid var(--dark-gray-faded);
+        padding: 0 0 0 3em;
     }
 
-    #searchForm #locationQuery {
-        background-image: url(assets/desktop/icon-location.svg);
-        padding: 0 0 0 3.5625em;
+    #searchForm .fieldWrapper input {
+        background: var(--white);
     }
 
-    #searchForm #titleQuery {
-        flex-grow: 6;
+    #searchForm #titleQueryLabel {
+        flex-grow: 3;
+        background: url(assets/desktop/icon-search-violet.svg) center left .75rem no-repeat;
     }
 
-    #locationQuery {
-        flex-grow: 2;
+    #searchForm #locationQueryLabel {
+        flex-grow: 1;
+        display: block;
+        background: url(assets/desktop/icon-location.svg) center left 1.125em no-repeat;
     }
 
     #fullTimeQueryWrapper {
