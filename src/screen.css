@@ -468,4 +468,12 @@ header {
     #fullTimeQueryWrapper label b {
         display: inline;
     }
+
+    #searchForm {
+        margin: 0 0 6.5625em;
+    }
+
+    #jobList {
+        column-gap: 1.875em;
+    }
 }
