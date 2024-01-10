@@ -66,7 +66,7 @@
 
 #jobDetailsCard #applyNowButton {
     width: 100%;
-    margin: 3.375em 0 0;
+    margin: 2.5em 0 0;
 }
 
 #jobDetailsCard p,
@@ -118,6 +118,10 @@
     margin: 2em -1.5em -2em;
     text-align: center;
     padding: 1.5em;
+}
+
+#applyNowFooter h3 {
+    display: none;
 }
 
 @media (min-width: 48em) {
@@ -180,5 +184,29 @@
         margin: -2.875em 0 0;
         padding: 0;
         width: 9.5em;
+    }
+
+    #applyNowFooter {
+        margin: 0 -2.4375em -2.625em;
+        padding: 1.5em 2.4375em;
+        text-align: left;
+    }
+
+    #applyNowFooter section {
+        max-width: 60em;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #applyNowFooter h3 {
+        display: block;
+    }
+
+    #applyNowFooter h3 small {
+        display: block;
+        font-weight: 500;
+        color: var(--dark-gray);
     }
 }
