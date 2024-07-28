@@ -274,6 +274,7 @@ main > article > header {
 #searchForm .textField {
     height: 100%;
     width: 100%;
+    color: var(--very-dark-blue);
 }
 
 #locationQuery, #fullTimeQuery, #fullTimeQuery + label {
@@ -315,6 +316,7 @@ main > article > header {
     padding: 3em 2em 2.25em;
     color: var(--dark-gray);
     text-decoration: none;
+    height: 100%;
 }
 
 .job .logoWrapper {
@@ -329,12 +331,16 @@ main > article > header {
     align-items: center;
 }
 
+.job header {
+    margin: 0 0 1.75em;
+}
+
 .job h3 {
     color: var(--very-dark-blue);
 }
 
 .job small {
-    margin: 1.75em 0 0;
+    margin: auto 0 0;
     color: var(--violet);
     font-weight: 700;
     font-size: 0.875em;
@@ -347,7 +353,7 @@ main > article > header {
 #mobileFiltersWrapper {
     position: fixed;
     width: 20.4375em;
-    height: 13.5625em;
+    /*height: 13.5625em;*/
     top: 50%;
     left: 50%;
     margin-left: calc(-20.4375em / 2);
@@ -379,6 +385,21 @@ main > article > header {
     font-weight: 700;
     display: flex;
     column-gap: 1em;
+}
+
+#mobileFiltersWrapper #mobileLocationSuggestions {
+    display: block;
+    background: var(--light-gray);
+    margin: -1.5em -1.5em 0;
+    padding: 0.5em 1.5em 0.5rem 3.5625em;
+}
+
+#mobileLocationSuggestions a {
+    text-decoration: none;
+    font-size: 0.875em;
+    font-weight: 700;
+    line-height: 2;
+    color: var(--midnight);
 }
 
 #overlay {
